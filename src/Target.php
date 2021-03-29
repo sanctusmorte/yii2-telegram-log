@@ -62,6 +62,7 @@ class Target extends \yii\log\Target
         Logger::LEVEL_ERROR => true,
         Logger::LEVEL_WARNING => false,
         Logger::LEVEL_INFO => false,
+        Logger::LEVEL_TRACE => false,
     ];
 
     /**
