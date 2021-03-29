@@ -58,7 +58,11 @@ class Target extends \yii\log\Target
      * @var bool|bool[] whether to send the message silently (`bool` or an array of `bool` per a logger level).
      * iOS users will not receive a notification, Android users will receive a notification with no sound.
      */
-    public $enableNotification = true;
+    public $enableNotification = [
+        Logger::LEVEL_ERROR => true,
+        Logger::LEVEL_WARNING => false,
+        Logger::LEVEL_INFO => false,
+    ];
 
     /**
      * @var string[] level emoji per a logger level.
